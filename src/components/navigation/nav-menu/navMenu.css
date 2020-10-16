@@ -1,0 +1,46 @@
+.tool-bar {
+    display: flex;
+}
+
+.tool-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-container {
+    align-self: stretch;
+    align-items: center;
+    display: flex;
+    margin-left: 15px;
+    padding-top: 3px;
+    font-size: large;
+}
+
+.nav-links-container a {
+    text-align: center;
+    margin-left: 5px;
+    width: 170px;
+}
+
+.nav-links-container a:hover {
+    padding-top: 1px;
+    border-bottom: 1px solid #dc004e;
+}
+
+.nav-links-container .active-link {
+    padding-top: 1px;
+    border-bottom: 1px solid #dc004e;
+}
+
+.header-icon {
+    margin-left: 5px;
+}
+
+.github-button {
+    margin-left: auto;
+}

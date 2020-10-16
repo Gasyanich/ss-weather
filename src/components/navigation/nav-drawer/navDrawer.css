@@ -1,0 +1,10 @@
+.list {
+    width: 70vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.list a {
+    text-decoration: none;
+    color: black;
+}
