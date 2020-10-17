@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+    .main-layout {
+        position: absolute;
+        display: flex;
+        left: calc(20vw);
+        width: calc(100% - 40vw);
+        padding-top: 20px;
+    }
+}
