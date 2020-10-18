@@ -10,6 +10,7 @@ import moment from 'moment';
 
 const getFactWeather = (weather) => {
   const {fact} = weather;
+  // получаем только текущее время (hh:mm)
   const currentTime = moment(new Date(weather.now_dt))
       .locale('ru')
       .format('LT');
@@ -23,6 +24,12 @@ const getFactWeather = (weather) => {
   };
 };
 
+/**
+ * Карточка "Погода сейчас"
+ * @param {any} weather - json, полученный из API
+ * @return {JSX.Element}
+ * @constructor
+ */
 const FactWeather = ({weather}) => {
   const [factWeather, setFactWeather] = useState({});
 

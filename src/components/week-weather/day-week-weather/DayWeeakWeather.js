@@ -11,6 +11,12 @@ import {getConditionDescription, getDayPartName, getIconUrl}
   from '../../../utils/weatherUtils';
 
 
+/**
+ * Карточка прогноза погоды для дня недели
+ * @param {any} forecast - прогноз погоды на неделю, полученный из API
+ * @return {JSX.Element}
+ * @constructor
+ */
 const DayWeekWeather = ({forecast}) => {
   const [dayWeekWeather, setDayWeekWeather] = useState({});
 

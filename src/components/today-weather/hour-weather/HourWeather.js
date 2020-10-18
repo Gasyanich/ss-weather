@@ -11,6 +11,12 @@ import TableBody from '@material-ui/core/TableBody';
 import {getConditionDescription, getIconUrl} from '../../../utils/weatherUtils';
 import {getTimeByHour} from '../../../utils/dateTimeUtils';
 
+/**
+ * Карточка "Почасовой прогноз"
+ * @param {any} weather - json, полученный из API
+ * @return {JSX.Element}
+ * @constructor
+ */
 const HourWeather = ({weather}) => {
   const [todayByHours, setTodayByHours] = useState([]);
 

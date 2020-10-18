@@ -16,6 +16,7 @@ const getDayPart = (parts, partName) => {
 };
 
 const getDayPartsWeather = (weather) => {
+  // первый день из прогноза - сегодняшний
   const {parts} = weather.forecasts[0];
 
   const day = getDayPart(parts, 'day');
@@ -28,6 +29,12 @@ const getDayPartsWeather = (weather) => {
   return [day, night, morning, evening];
 };
 
+/**
+ * Карточка "Прогноз на сегодня"
+ * @param {any} weather - json, полученный из API
+ * @return {JSX.Element}
+ * @constructor
+ */
 const DayPartWeather = ({weather}) => {
   const [dayPartsWeather, setDayPartsWeather] = useState([]);
 

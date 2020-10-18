@@ -1,11 +1,27 @@
+/**
+ * Возвращает url икноки с погодой
+ * @param {string} iconCode - название иконки, полученное из API
+ * @return {string} - url иконки
+ */
 export const getIconUrl = (iconCode) => {
   return `https://yastatic.net/weather/i/icons/blueye/color/svg/${iconCode}.svg`;
 };
 
+/**
+ * Получение описания погодного состояния
+ * @param {string} condition - условное обозначение состояния из строки
+ * @return {string} - описание погодного состояния
+ */
 export const getConditionDescription = (condition) => {
   return conditionDescription[condition];
 };
 
+
+/**
+ * Получение названия времени суток
+ * @param {string} dayCode - описание названия времени суток, полученное из API
+ * @return {string} - название времени суток
+ */
 export const getDayPartName = (dayCode) => {
   return dayPartNames[dayCode];
 };

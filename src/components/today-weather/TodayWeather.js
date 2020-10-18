@@ -7,6 +7,11 @@ import HourWeather from './hour-weather';
 
 const apiUrl = 'https://ss-weather-api.herokuapp.com/weather/53.2001/50.15';
 
+/**
+ * Страница "Прогноз на сегодня"
+ * @return {JSX.Element}
+ * @constructor
+ */
 const TodayWeather = () => {
   const [weather, setWeather] = useState();
 
