@@ -8,7 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
 import {getConditionDescription, getIconUrl} from '../../../utils/weatherUtils';
-import {getTimeByHour} from '../../../utils/timeUtils';
+import {getTimeByHour} from '../../../utils/dateTimeUtils';
 
 const HourWeather = ({weather}) => {
   const [todayByHours, setTodayByHours] = useState([]);

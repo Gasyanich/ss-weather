@@ -4,6 +4,7 @@ import NavMenu from './components/navigation/nav-menu';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import TodayWeather from './components/todayWeather/TodayWeather';
 import './components/shared/layout.css';
+import WeekWeather from './components/week-weather/';
 
 function App() {
   return (
@@ -15,8 +16,7 @@ function App() {
             <Redirect to="/today"/>
           </Route>
           <Route path="/today" component={TodayWeather}/>
-          <Route path="/week" component={TodayWeather}/>
-          <Route path="/month" component={TodayWeather}/>
+          <Route path="/week" component={WeekWeather}/>
         </Switch>
       </main>
     </BrowserRouter>
