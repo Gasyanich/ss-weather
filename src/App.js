@@ -2,7 +2,7 @@ import React from 'react';
 import 'fontsource-roboto';
 import NavMenu from './components/navigation/nav-menu';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
-import TodayWeather from './components/todayWeather/TodayWeather';
+import TodayWeather from './components/today-weather/';
 import './components/shared/layout.css';
 import WeekWeather from './components/week-weather/';
 
