@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+    .card {
+        width: 70%;
+    }
+
+}
+
+.condition-icon{
+    width: 100%;
+}
+
+.card{
+    margin: 10px;
+}
+
+.card-content-col{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.part-weather-container {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.part-weather-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

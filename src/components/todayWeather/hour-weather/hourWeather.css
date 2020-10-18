@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    .card-hour {
+        width: 70%;
+    }
+}
+
+.card-hour{
+    margin: 10px;
+}
+
+.card-content-hour {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.table-by-hour{
+    margin-top: 20px;
+}
+
+.weather-condition-cell{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.weather-condition-cell img{
+    width: 30px;
+}
+
+.weather-condition-cell strong{
+    margin-left: 5px;
+}
+
+
