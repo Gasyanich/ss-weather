@@ -4,8 +4,7 @@ import FactWeather from './fact-weather/';
 import DayPartWeather from './day-part-weather/';
 import './todayWeather.css';
 import HourWeather from './hour-weather';
-
-const apiUrl = 'https://ss-weather-api.herokuapp.com/weather/53.2001/50.15';
+import {apiUrl} from '../../utils/apiUtils';
 
 /**
  * Страница "Прогноз на сегодня"

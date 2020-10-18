@@ -2,8 +2,7 @@ import React, {useEffect, useState} from 'react';
 import '../shared/cards.css';
 import '../shared/layout.css';
 import DayWeekWeather from './day-week-weather/DayWeeakWeather';
-
-const apiUrl = 'https://ss-weather-api.herokuapp.com/weather/53.2001/50.15';
+import {apiUrl} from '../../utils/apiUtils';
 
 const WeekWeather = () => {
   const [weekWeather, setWeekWeather] = useState([]);
@@ -18,8 +17,7 @@ const WeekWeather = () => {
   }, []);
 
   return (
-    <div className="full-width"
-      style={{display: 'flex', flexDirection: 'column'}}>
+    <div className="full-width week-weather-card-content">
       {weekWeather.map((dayWeek, index) => (
         <DayWeekWeather forecast={dayWeek} key={index}/>
       ))}

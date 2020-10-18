@@ -10,7 +10,6 @@ import TableBody from '@material-ui/core/TableBody';
 import {getConditionDescription, getDayPartName, getIconUrl}
   from '../../../utils/weatherUtils';
 
-
 /**
  * Карточка прогноза погоды для дня недели
  * @param {any} forecast - прогноз погоды на неделю, полученный из API
