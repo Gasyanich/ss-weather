@@ -5,6 +5,7 @@ import 'moment/locale/ru';
 import Typography from '@material-ui/core/Typography';
 import {getConditionDescription, getIconUrl} from '../../../utils/weatherUtils';
 import './factWeather.css';
+import '../../shared/cards.css';
 import moment from 'moment';
 
 const getFactWeather = (weather) => {
@@ -33,10 +34,10 @@ const FactWeather = ({weather}) => {
   }, [weather]);
 
   return (
-    <Card className="card">
+    <Card className="weather-card">
       <CardContent>
-        <div className="card-content">
-          <div className="card-content-info">
+        <div className="fact-weather-card-content">
+          <div className="fact-weather-card-content-info">
             <Typography variant="h6">
               <strong>Погода сейчас</strong>
             </Typography>

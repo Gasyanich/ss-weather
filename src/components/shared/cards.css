@@ -1,9 +1,9 @@
 @media (min-width: 768px) {
-    .card {
+    .weather-card {
         width: 70%;
     }
 }
 
-.card {
+.weather-card {
     margin: 10px;
 }

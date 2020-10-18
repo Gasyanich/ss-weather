@@ -43,9 +43,9 @@ const DayWeekWeather = ({forecast}) => {
   }, []);
 
   return (
-    <Card className="card">
+    <Card className="weather-card">
       <CardContent>
-        <div className="day-week-card-content">
+        <div className="week-weather-card-content">
           <Typography variant="h6">
             {dayWeekWeather.date}
           </Typography>
@@ -85,7 +85,7 @@ const DayWeekWeather = ({forecast}) => {
                       </strong>
                     </TableCell>
                     <TableCell align="left">
-                      <div className="weather-condition-cell">
+                      <div className="hour-weather-condition-cell">
                         <img src={getIconUrl(partByName.part.icon)} alt=""/>
                         <strong>
                           {getConditionDescription(partByName.part.condition)}

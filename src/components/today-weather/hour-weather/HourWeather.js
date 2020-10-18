@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {CardContent, Hidden, Table} from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import './hourWeather.css';
+import '../../shared/cards.css';
 import Typography from '@material-ui/core/Typography';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
@@ -22,14 +23,14 @@ const HourWeather = ({weather}) => {
 
   return (
     <>
-      <Card className="card-hour">
+      <Card className="weather-card">
         <CardContent>
           <div className="card-content-hour">
             <Typography variant="h6">
               <strong>Почасовой прогноз</strong>
             </Typography>
 
-            <Table className="table-by-hour">
+            <Table className="hour-weather-table">
               <TableHead>
                 <TableRow>
                   <TableCell align="left">
@@ -62,7 +63,7 @@ const HourWeather = ({weather}) => {
                       </strong>
                     </TableCell>
                     <TableCell align="left">
-                      <div className="weather-condition-cell">
+                      <div className="hour-weather-condition-cell">
                         <img src={getIconUrl(hour.icon)} alt=""/>
                         <strong>
                           {getConditionDescription(hour.condition)}

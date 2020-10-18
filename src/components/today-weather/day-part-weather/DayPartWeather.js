@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import {CardContent} from '@material-ui/core';
 import {getDayPartName, getIconUrl} from '../../../utils/weatherUtils';
 import './dayPartWeather.css';
+import '../../shared/cards.css';
 
 const getDayPart = (parts, partName) => {
   const part = parts[partName];
@@ -38,14 +39,14 @@ const DayPartWeather = ({weather}) => {
   }, [weather]);
 
   return (
-    <Card className="card">
+    <Card className="weather-card">
       <CardContent>
-        <div className="card-content-col">
+        <div className="parts-weather-card-content">
           <Typography variant="h6">
             <strong>Прогноз на сегодня</strong>
           </Typography>
 
-          <div className="part-weather-container">
+          <div className="parts-weather-container">
             {dayPartsWeather.map((partWeather, index) => (
               <div className="part-weather-content" key={index}>
                 <Typography variant="h6">
