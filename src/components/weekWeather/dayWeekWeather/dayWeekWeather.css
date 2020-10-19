@@ -1,13 +1,8 @@
-.card-content-hour {
+.day-week-weather-condition-cell {
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     word-break: break-word;
-}
-
-.hour-weather-table {
-    margin-top: 20px;
 }
 
 .hour-weather-condition-cell {
@@ -16,12 +11,10 @@
     align-items: center;
 }
 
-.hour-weather-condition-cell img {
+.day-week-weather-condition-cell img {
     width: 30px;
 }
 
-.hour-weather-condition-cell strong {
+.day-week-weather-condition-cell strong {
     margin-left: 5px;
 }
-
-

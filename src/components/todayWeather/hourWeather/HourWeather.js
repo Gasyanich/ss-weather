@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {CardContent, Hidden, Table} from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import './hourWeather.css';
@@ -18,79 +18,71 @@ import {getTimeByHour} from '../../../utils/dateTimeUtils';
  * @constructor
  */
 const HourWeather = ({weather}) => {
-  const [todayByHours, setTodayByHours] = useState([]);
-
-  useEffect(() => {
-    if (weather) {
-      const todayByHours = weather.forecasts[0].hours;
-      setTodayByHours(todayByHours);
-    }
-  }, [weather]);
+  // первый день прогноза - сегодня
+  const todayByHours = weather.forecasts[0].hours;
 
   return (
-    <>
-      <Card className="weather-card">
-        <CardContent>
-          <div className="card-content-hour">
-            <Typography variant="h6">
-              <strong>Почасовой прогноз</strong>
-            </Typography>
+    <Card className="weather-card">
+      <CardContent>
+        <div className="card-content-hour">
+          <Typography variant="h6">
+            <strong>Почасовой прогноз</strong>
+          </Typography>
 
-            <Table className="hour-weather-table">
-              <TableHead>
-                <TableRow>
+          <Table className="hour-weather-table">
+            <TableHead>
+              <TableRow>
+                <TableCell align="left">
+                  <strong>Время</strong>
+                </TableCell>
+                <TableCell align="right">
+                  <strong>Температура</strong>
+                </TableCell>
+                <TableCell align="left">
+
+                </TableCell>
+                <Hidden smDown>
+                  <TableCell className="pressure-column" align="right">
+                    <strong>Давление</strong>
+                  </TableCell>
+                </Hidden>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {todayByHours.map((hour) => (
+                <TableRow key={hour.hour}>
                   <TableCell align="left">
-                    <strong>Время</strong>
+                    <strong>
+                      {getTimeByHour(hour.hour)}
+                    </strong>
                   </TableCell>
                   <TableCell align="right">
-                    <strong>Температура</strong>
+                    <strong>
+                      {hour.temp}°
+                    </strong>
                   </TableCell>
                   <TableCell align="left">
-
+                    <div className="hour-weather-condition-cell">
+                      <img src={getIconUrl(hour.icon)} alt=""/>
+                      <strong>
+                        {getConditionDescription(hour.condition)}
+                      </strong>
+                    </div>
                   </TableCell>
                   <Hidden smDown>
-                    <TableCell className="pressure-column" align="right">
-                      <strong>Давление</strong>
+                    <TableCell align="right">
+                      <strong>
+                        {hour.pressure_mm} мм.рт.ст
+                      </strong>
                     </TableCell>
                   </Hidden>
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {todayByHours.map((hour) => (
-                  <TableRow key={hour.hour}>
-                    <TableCell align="left">
-                      <strong>
-                        {getTimeByHour(hour.hour)}
-                      </strong>
-                    </TableCell>
-                    <TableCell align="right">
-                      <strong>
-                        {hour.temp}°
-                      </strong>
-                    </TableCell>
-                    <TableCell align="left">
-                      <div className="hour-weather-condition-cell">
-                        <img src={getIconUrl(hour.icon)} alt=""/>
-                        <strong>
-                          {getConditionDescription(hour.condition)}
-                        </strong>
-                      </div>
-                    </TableCell>
-                    <Hidden smDown>
-                      <TableCell align="right">
-                        <strong>
-                          {hour.pressure_mm} мм.рт.ст
-                        </strong>
-                      </TableCell>
-                    </Hidden>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
-        </CardContent>
-      </Card>
-    </>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 

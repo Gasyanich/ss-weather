@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Card from '@material-ui/core/Card';
 import {CardContent} from '@material-ui/core';
 import 'moment/locale/ru';
@@ -31,14 +31,7 @@ const getFactWeather = (weather) => {
  * @constructor
  */
 const FactWeather = ({weather}) => {
-  const [factWeather, setFactWeather] = useState({});
-
-  useEffect(() => {
-    if (weather) {
-      const factWeather = getFactWeather(weather);
-      setFactWeather(factWeather);
-    }
-  }, [weather]);
+  const factWeather = getFactWeather(weather);
 
   return (
     <Card className="weather-card">

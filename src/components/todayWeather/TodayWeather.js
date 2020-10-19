@@ -5,6 +5,7 @@ import DayPartWeather from './dayPartWeather/';
 import './todayWeather.css';
 import HourWeather from './hourWeather';
 import {apiUrl} from '../../utils/apiUtils';
+import Loader from '../shared/Loader';
 
 /**
  * Страница "Прогноз на сегодня"
@@ -24,9 +25,14 @@ const TodayWeather = () => {
 
   return (
     <div className="container full-width">
-      <FactWeather weather={weather} />
-      <DayPartWeather weather={weather} />
-      <HourWeather weather={weather}/>
+      {weather ? (
+        <>
+          <FactWeather weather={weather}/>
+          <DayPartWeather weather={weather} />
+          <HourWeather weather={weather}/>
+        </>
+      ) : <Loader />
+      }
     </div>
   );
 };
