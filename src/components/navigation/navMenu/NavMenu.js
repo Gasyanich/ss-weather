@@ -10,7 +10,7 @@ import {Hidden} from '@material-ui/core';
 import {NavLink} from 'react-router-dom';
 import {navMenuRoutes} from '../../../routes/navMenuRoutes';
 import Drawer from '@material-ui/core/Drawer';
-import NavDrawer from '../nav-drawer';
+import NavDrawer from '../navDrawer';
 
 const NavMenu = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);

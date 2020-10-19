@@ -98,7 +98,7 @@ const DayWeekWeather = ({forecast}) => {
                       </div>
                     </TableCell>
                     <Hidden smDown>
-                      <TableCell align="left">
+                      <TableCell align="right">
                         <strong>
                           {partByName.part.pressure_mm} мм.рт.ст
                         </strong>

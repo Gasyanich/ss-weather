@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import 'moment/locale/ru';
-import FactWeather from './fact-weather/';
-import DayPartWeather from './day-part-weather/';
+import FactWeather from './factWeather/';
+import DayPartWeather from './dayPartWeather/';
 import './todayWeather.css';
-import HourWeather from './hour-weather';
+import HourWeather from './hourWeather';
 import {apiUrl} from '../../utils/apiUtils';
 
 /**

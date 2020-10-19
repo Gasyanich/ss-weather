@@ -77,7 +77,7 @@ const HourWeather = ({weather}) => {
                       </div>
                     </TableCell>
                     <Hidden smDown>
-                      <TableCell align="left">
+                      <TableCell align="right">
                         <strong>
                           {hour.pressure_mm} мм.рт.ст
                         </strong>

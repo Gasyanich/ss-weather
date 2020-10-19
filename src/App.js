@@ -1,10 +1,10 @@
 import React from 'react';
 import 'fontsource-roboto';
-import NavMenu from './components/navigation/nav-menu';
+import NavMenu from './components/navigation/navMenu';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
-import TodayWeather from './components/today-weather/';
+import TodayWeather from './components/todayWeather/';
 import './components/shared/layout.css';
-import WeekWeather from './components/week-weather/';
+import WeekWeather from './components/weekWeather/';
 
 function App() {
   return (

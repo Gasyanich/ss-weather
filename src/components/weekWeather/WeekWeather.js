@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import '../shared/cards.css';
 import '../shared/layout.css';
-import DayWeekWeather from './day-week-weather/DayWeeakWeather';
+import DayWeekWeather from './dayWeekWeather/DayWeeakWeather';
 import {apiUrl} from '../../utils/apiUtils';
 
 const WeekWeather = () => {
