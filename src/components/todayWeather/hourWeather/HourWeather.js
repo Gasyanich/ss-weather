@@ -35,14 +35,14 @@ const HourWeather = ({weather}) => {
                 <TableCell align="left">
                   <strong>Время</strong>
                 </TableCell>
-                <TableCell align="right">
+                <TableCell align="left">
                   <strong>Температура</strong>
                 </TableCell>
                 <TableCell align="left">
 
                 </TableCell>
                 <Hidden smDown>
-                  <TableCell className="pressure-column" align="right">
+                  <TableCell align="left">
                     <strong>Давление</strong>
                   </TableCell>
                 </Hidden>
@@ -56,7 +56,7 @@ const HourWeather = ({weather}) => {
                       {getTimeByHour(hour.hour)}
                     </strong>
                   </TableCell>
-                  <TableCell align="right">
+                  <TableCell align="center">
                     <strong>
                       {hour.temp}°
                     </strong>
@@ -70,7 +70,7 @@ const HourWeather = ({weather}) => {
                     </div>
                   </TableCell>
                   <Hidden smDown>
-                    <TableCell align="right">
+                    <TableCell align="left">
                       <strong>
                         {hour.pressure_mm} мм.рт.ст
                       </strong>

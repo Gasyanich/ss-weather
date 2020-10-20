@@ -2,8 +2,7 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import '../../shared/cards.css';
 import './dayWeekWeather.css';
-import {CardContent, Hidden, Table, Typography,
-  withStyles} from '@material-ui/core';
+import {CardContent, Hidden, Table, Typography} from '@material-ui/core';
 import {getDate} from '../../../utils/dateTimeUtils';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
@@ -11,26 +10,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
 import {getConditionDescription, getDayPartName, getIconUrl}
   from '../../../utils/weatherUtils';
-
-
-const CustomTableCell = withStyles((theme) => ({}
-))(TableCell);
-
-const dayPartNameCol = {
-  width: '15%',
-};
-
-const tempCol = {
-  width: '15%',
-};
-
-const pressureCol = {
-  width: '25%',
-};
-
-const conditionDescriptionCol = {
-  width: '45%',
-};
 
 /**
  * Карточка прогноза погоды для дня недели
@@ -76,45 +55,43 @@ const DayWeekWeather = ({forecast}) => {
           <Table>
             <TableHead>
               <TableRow>
-                <CustomTableCell style={dayPartNameCol} align="left">
+                <TableCell width="20%" align="left">
                   {strongText('Время суток')}
-                </CustomTableCell>
-                <CustomTableCell style={tempCol} align="right">
+                </TableCell>
+                <TableCell width="20%" align="left">
                   {strongText('Температура')}
-                </CustomTableCell>
-                <CustomTableCell style={conditionDescriptionCol} align="left">
+                </TableCell>
+                <TableCell width="40%" align="left">
 
-                </CustomTableCell>
+                </TableCell>
                 <Hidden smDown>
-                  <CustomTableCell style={pressureCol} align="right">
+                  <TableCell align="left">
                     {strongText('Давление')}
-                  </CustomTableCell>
+                  </TableCell>
                 </Hidden>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody >
               {dayWeekWeather.parts.map((part, index) => (
                 <TableRow key={index}>
-                  <CustomTableCell style={dayPartNameCol} align="left">
+                  <TableCell align="left">
                     {strongText(part.name)}
-                  </CustomTableCell>
-                  <CustomTableCell style={tempCol} align="right">
+                  </TableCell>
+                  <TableCell align="center">
                     <strong>
-                      {part.part.temp_min}°
-                        ...
-                      {part.part.temp_max}°
+                      {part.part.temp_min}°... {part.part.temp_max}°
                     </strong>
-                  </CustomTableCell>
-                  <CustomTableCell style={conditionDescriptionCol} align="left">
+                  </TableCell>
+                  <TableCell align="left">
                     <div className="day-week-weather-condition-cell">
                       <img src={getIconUrl(part.part.icon)} alt=""/>
                       {strongText(getConditionDescription(part.part.condition))}
                     </div>
-                  </CustomTableCell>
+                  </TableCell>
                   <Hidden smDown>
-                    <CustomTableCell style={pressureCol} align="right">
+                    <TableCell align="right">
                       {strongText(part.part.pressure_mm + ' мм.рт.ст')}
-                    </CustomTableCell>
+                    </TableCell>
                   </Hidden>
                 </TableRow>
               ))}

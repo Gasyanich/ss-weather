@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    word-break: break-word;
 }
 
 .hour-weather-table {
@@ -18,6 +17,12 @@
 
 .hour-weather-condition-cell img {
     width: 30px;
+}
+
+@media (max-width: 410px) {
+    .hour-weather-condition-cell strong {
+        display: none;
+    }
 }
 
 .hour-weather-condition-cell strong {

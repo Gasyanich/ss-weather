@@ -3,14 +3,18 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Loader = () => {
   return (
-    <CircularProgress
-      style={{
-        position: 'absolute',
-        left: 'calc(50% - 50px)',
-        right: 'calc(50% - 50px)',
-        width: '100px',
-        top: '30vh',
-      }} />);
+    <div style={{
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <CircularProgress size={100} />
+    </div>);
 };
 
 export default Loader;

@@ -2,7 +2,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    word-break: break-word;
 }
 
 .hour-weather-condition-cell {
@@ -13,6 +12,13 @@
 
 .day-week-weather-condition-cell img {
     width: 30px;
+}
+
+@media (max-width:410px) {
+    .day-week-weather-condition-cell strong {
+        display: none;
+    }
+
 }
 
 .day-week-weather-condition-cell strong {
